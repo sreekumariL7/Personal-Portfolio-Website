@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- Favicon link -->
+    <link rel="shortcut icon" href="portfolio.png">
+    <!-- Title link -->
+    <title>Personal Portfolio</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/b9276cef4c.js" crossorigin="anonymous"></script>
+    
+    <!-- ========== RUM Implementation ========== -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKJRQRJEWE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZKJRQRJEWE');
+      
+      // Load Web Vitals for Core Web Vitals tracking
+      import('https://unpkg.com/web-vitals@2.1.0/dist/web-vitals.umd.js')
+        .then(({getCLS, getFID, getLCP}) => {
+          getCLS(metric => gtag('event', 'web_vital', metric));
+          getFID(metric => gtag('event', 'web_vital', metric));
+          getLCP(metric => gtag('event', 'web_vital', metric));
+        });
+    </script>
+</head>
+<body>
+
+<!-- -------------------------------------Header------------------------------------------------------ -->
+<div id="header">
+    <div class="container">
+        <nav class="head">
+            <!-- User icon -->
+            <i class="fa-solid fa-user"></i>
+            <!-- Navigation Menu -->
+            <ul id="sidemenu">
+                <li><a href="#header" class="nav-link">Home</a></li>
+                <li><a href="#About" class="nav-link">About</a></li>
+                <li><a href="#Project" class="nav-link">Project</a></li>
+                <li><a href="#Contact" class="nav-link">Contact</a></li>
+                <!-- Close menu button -->
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <!-- Open menu button -->
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <!-- Header text -->
+        <div class="header-text">
+                <p>Hey there!</p>
+                <h1>I'm <span>Chalakamarri Sreekumari</span></h1>
+                <br>
+                <!-- CV download button -->
+                <a href="Resume.pdf" class="download-button" target="_blank">Download CV</a>
+        </div>
+    </div>
+</div> 
+
+<!-- ------------------------------------About------------------------------------------------------- -->
+<div id="About">
+    <div class="container">
+        <div class="row">
+            <!-- About Section Image -->
+            <div class="about-col-1">
+                <img src="my_photo.jpeg" alt="My photo">
+            </div>
+            <!-- About Section Content -->
+            <div class="about-col-2">
+                <h1 class="sub-title">About me</h1>
+                <p class="text">Hello! I'm Chalakamarri Sreekumari, a Final-Year Computer Science and Engineering student at Vardhaman College Of Engineering.
+                     Passionate about coding, problem-solving, and Front-End development, I'm constantly exploring new technologies to create innovative solutions.
+                    </p>
+                <!-- Tab Titles -->
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('achievements')">Achievements</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <!-- Skills tab content -->
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Java</span></li>
+                        <li><span>SQL</span></li>
+                        <li><span>Web development (HTML, CSS, JavaScript)</span></li>
+                    </ul>
+                </div>
+                <!-- Experience tab content -->
+                <div class="tab-contents" id="achievements">
+                    <ul>
+                        <li><span>Project</span><br>Finalist participant in Smart India Hackathon, contributing to solution design and prototype development.</li>
+                        <li><span>1st place</span><br>Achieved in the Volleyball Association of Gandhinagar District Championship 2023-24</li>
+                    </ul>
+                </div>
+                <!-- Education tab content -->
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022-Present</span><br>Vardhaman College Of Engineering/li>
+                        <li><span>2020-2022</span><br>NTR Junior College</li>
+                        <li><span>2015-2020</span><br>Sujatha School Rangareddy</li>
+                    </ul>
+                </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+<!-- --------------------------------------Project---------------------------------------------- -->
+<div id="Project">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="projects-list">
+            <!-- Project 1 -->
+            <div>
+                <i class="fas fa-user-md"></i>
+                <h2>AI Based Health Monitoring And System Diagnosis System</h2>
+                <p>Implemented risk prediction models using Random Forest to assess health status from patient vitals.Applied Naive Bayes classification for disease diagnosis, enabling decision support in healthcare scenarios that supports secure tracking, data logging, and historical reporting for patients and admins.</p>
+                <a href="https://github.com/sreekumariL7/miniproject" target="_blank" class="project-link">Learn more</a>    
+            </div>
+            <!-- Project 2 -->
+            <div>
+                <i class="fa-regular fa-address-card"></i>
+                <h2>Personal Portfolio</h2>
+                <p>Built a responsive portfolio website using HTML, CSS, and JavaScript, 
+                    featuring a modern design to display my projects, skills, and achievements. 
+                    The site includes interactive elements for better user experience and a showcase of my web development skills.</p>
+                <a href="https://github.com/sreekumariL7/Personal-Portfolio-Website" target="_blank" class="project-link">Learn more</a>
+            </div>
+            <!-- Project 3 -->
+            <div>
+                <i class="fas fa-chart-line"></i>
+                <h2>Smart Interview Tracker</h2>
+                <p>Built a responsive single-page web app with HTML, CSS, and JavaScript, storing data in browser localStorage to track and visualize interview preparation progress across DSA, Java, SQL, and HR topics.</p>
+                <a href="https://github.com/sreekumariL7/Smart-Interview-Prep" target="_blank" class="project-link">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -----------------------------------------Contact-------------------------------------------------------- -->
+<div id="Contact">
+    <div class="container">
+            <div class="contact-list">
+                <h1 class="sub-title">Contact me</h1>
+                <p>You can reach out to me through the following platforms:</p>
+                <!-- Contact email -->
+                <p><i class="fas fa-paper-plane"></i>chalakamarrisreekumari22cs@student.vardhaman.org</p>
+                <!-- Social media icons -->
+                <div class="social-icons">
+                    <a href="https://github.com/sreekumariL7" target="_blank" class="social-link"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sreekuma-ch/" target="_blank" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+    </div>
+</div>
+
+<!-- ---------------------------------------Java Script--------------------------------------------------- -->
+<script>
+    // Tab functionality
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    
+    // Menu functionality
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";    
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";    
+    }
+    
+    // Enhanced RUM Tracking
+    document.addEventListener('DOMContentLoaded', function() {
+        // Track page performance
+        if (window.performance) {
+            const timing = performance.timing;
+            const navStart = timing.navigationStart;
+            
+            setTimeout(() => {
+                gtag('event', 'page_performance', {
+                    page_load: timing.loadEventEnd - navStart,
+                    dom_ready: timing.domComplete - timing.domLoading,
+                    ttfb: timing.responseStart - timing.requestStart,
+                    page_path: location.pathname
+                });
+            }, 1000);
+        }
+        
+        // Track user interactions
+        document.querySelectorAll('a, button, .nav-link, .project-link, .social-link, .download-button').forEach(el => {
+            el.addEventListener('click', function(e) {
+                gtag('event', 'user_interaction', {
+                    element_type: e.target.tagName,
+                    element_id: e.target.id || 'none',
+                    element_class: e.target.className || 'none',
+                    element_text: e.target.innerText.substring(0, 50),
+                    interaction_type: 'click',
+                    page_section: e.target.closest('[id]')?.id || 'unknown'
+                });
+            });
+        });
+    });
+    
+    // Error tracking
+    window.addEventListener('error', function(e) {
+        gtag('event', 'js_error', {
+            error_message: e.message,
+            error_stack: e.error?.stack,
+            error_file: e.filename,
+            error_line: e.lineno,
+            error_column: e.colno
+        });
+    });
+</script>
+</body>
+</html>
